@@ -1,9 +1,42 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.0/showdown.min.js"></script>
-<script>
-    fetch('resume.md')
-    .then(response => response.text())
-    .then(text => {
-        let converter = new showdown.Converter({ tables: true, strikethrough: true });
-        document.querySelector('.markdown-body').innerHTML = converter.makeHtml(text);
-    });
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Sapirstein - Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="markdown-body">
+        <h1>Loading resume...</h1>
+    </article>
+
+    <!-- Include Showdown.js for Markdown conversion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.0/showdown.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("resume.md")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    let converter = new showdown.Converter({
+                        tables: true,
+                        strikethrough: true,
+                        tasklists: true,
+                        ghCodeBlocks: true
+                    });
+                    converter.setFlavor('github'); // Use GitHub-style Markdown rendering
+                    document.querySelector('.markdown-body').innerHTML = converter.makeHtml(text);
+                })
+                .catch(error => {
+                    console.error("Error loading resume.md:", error);
+                    document.querySelector('.markdown-body').innerHTML = "<h1>Error loading resume</h1><p>Check if <code>resume.md</code> exists in your repository.</p>";
+                });
+        });
+    </script>
+</body>
+</html>
