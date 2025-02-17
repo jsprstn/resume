@@ -4,39 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesse Sapirstein - Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #0c0c0c;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            color: #ffffff;
+            white-space: pre;
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .markdown {
+            margin: 0;
+        }
+        .url {
+            color: #F22C3D;
+        }
+        .link-text {
+            color: #00A67D;
+        }
+        .hyphen {
+            color: #F22C3D;
+        }
+        .date-line {
+            background-color: #2a2a2a;
+            display: inline-block;
+            padding: 0 4px;
+        }
+    </style>
 </head>
 <body>
-    <article class="markdown-body">
-        <h1>Loading resume...</h1>
-    </article>
+<div class="markdown">
+<pre># Jesse Sapirstein
+Winnipeg, Manitoba, Canada | jsapirste@gmail.com | 204-797-6214
+[<span class="link-text">LinkedIn</span>](<span class="url">https://www.linkedin.com/in/jesse-sapirstein</span>)
 
-    <!-- Include Showdown.js for Markdown conversion -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.0/showdown.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("resume.md")
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! Status: ${response.status}`);
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    let converter = new showdown.Converter({
-                        tables: true,
-                        strikethrough: true,
-                        tasklists: true,
-                        ghCodeBlocks: true
-                    });
-                    converter.setFlavor('github'); // Use GitHub-style Markdown rendering
-                    document.querySelector('.markdown-body').innerHTML = converter.makeHtml(text);
-                })
-                .catch(error => {
-                    console.error("Error loading resume.md:", error);
-                    document.querySelector('.markdown-body').innerHTML = "<h1>Error loading resume</h1><p>Check if <code>resume.md</code> exists in your repository.</p>";
-                });
-        });
-    </script>
+## REVISION
+2025.02.17
+
+## EXPERIENCE
+   ─────────
+
+### Instrumentation Technologist - Magellan Aerospace
+<span class="date-line">2021.04 - 2023.01 | Winnipeg, MB</span>
+<span class="hyphen">-</span> Maintained production equipment for aerospace lines (F-35 JSF, GE F414, RADARSAT), performing preventive and corrective maintenance.
+<span class="hyphen">-</span> Troubleshot and repaired electrical and electronic control systems including field devices, relays, and contactors.
+<span class="hyphen">-</span> Worked on Allen-Bradley PLCs, SCADA, and human-machine interfaces for automated production equipment.
+<span class="hyphen">-</span> Configured process control loops and analyzed system performance to ensure compliance with specifications.
+<span class="hyphen">-</span> Liaised with maintenance teams, operators, and machine representatives to coordinate upgrades and repairs.
+<span class="hyphen">-</span> Assisted in the development of troubleshooting routines and testing procedures for industrial equipment.
+<span class="hyphen">-</span> Performed calibration and adjustments to maintain production equipment to specification.
+
+### Simulator Technician II / Maintenance Technologist - CAE
+<span class="date-line">2023.01 - Present | Winnipeg, MB</span>
+<span class="hyphen">-</span> On-site maintenance for Lockheed CP-140 Aurora Trainer at 402 Squadron, CFB Winnipeg.
+<span class="hyphen">-</span> Performed preventive and corrective maintenance per DND Maintenance Contract.
+<span class="hyphen">-</span> Debugged complex technologies: avionic systems, software, networking, simulation technologies.
+<span class="hyphen">-</span> Chair, Workplace Health & Safety Committee - ensuring a safe and compliant workplace environment.
+
+## EDUCATION
+   ────────
+
+### Advanced Diploma, Electromechanical Engineering Technology
+<span class="date-line">Humber College of Applied Technology | Toronto, ON | 2019</span>
+
+### Bachelor of Arts (w/Honours), Economics and Political Studies
+<span class="date-line">University of Manitoba | Winnipeg, MB | 2012</span>
+
+## SKILLS & ASSETS
+   ──────────────
+
+<span class="hyphen">-</span> Broad-spectrum troubleshooting: 24V/120V/480/600V control systems, CNCs, PLCs, SCADA, aerospace production equipment.
+<span class="hyphen">-</span> Experience with instrument calibration, electrical, pneumatic, hydraulic control systems.
+<span class="hyphen">-</span> Proficient in Microsoft Word, Excel, Linux, Jira, AutoCAD.
+<span class="hyphen">-</span> Government of Canada Controlled Goods Program, Secret security clearance.
+<span class="hyphen">-</span> Strong organizational, communication, and team collaboration skills.
+
+## PROJECTS
+   ────────
+
+### Automated Check Fixture Device
+<span class="date-line">Humber College Capstone | Nahanni Steel Products Inc. | 2019-2022</span>
+<span class="hyphen">-</span> Designed high-throughput automated fixture for screening 800+ steel brackets/hour.
+<span class="hyphen">-</span> [<span class="link-text">View Portfolio</span>](<span class="url">https://jsprstn.github.io/auto-check-fixture/</span>)</pre>
+</div>
 </body>
 </html>
