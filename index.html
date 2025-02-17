@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Sapirstein - Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="markdown-body">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.0/showdown.min.js"></script>
+        <script>
+            fetch('resume.md')
+            .then(response => response.text())
+            .then(text => {
+                let converter = new showdown.Converter();
+                document.querySelector('.markdown-body').innerHTML = converter.makeHtml(text);
+            });
+        </script>
+    </article>
+</body>
+</html>
