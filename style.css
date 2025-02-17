@@ -1,53 +1,42 @@
-/* 🌙 GitHub Dark Theme Background */
+/* 🌙 GitHub Dark Mode Styling */
 body {
     background-color: #0d1117; /* Dark background */
     color: #c9d1d9; /* Default text color */
     font-family: Consolas, Monaco, monospace; /* ASCII-style font */
     padding: 20px;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    justify-content: center; /* Centers content */
 }
 
+/* 📏 Properly Center & Expand Layout */
 .markdown-body {
-    max-width: 800px;
-    margin: auto;
-    background-color: #161b22; /* Code block background */
+    width: 80%; /* Adjust width for better readability */
+    max-width: 900px; /* Prevents content from being too wide */
+    background-color: #161b22; /* Slightly lighter dark background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-    word-wrap: break-word; /* Ensure text wraps gracefully */
+    line-height: 1.6; /* Improve text readability */
 }
 
-/* 🌟 Headings */
+/* 🏷 Headings */
 h1, h2, h3, h4 {
-    color: #58a6ff; /* GitHub blue */
-    word-wrap: break-word;
+    color: #e6edf3; /* Bright white */
+    margin-bottom: 10px;
 }
 
-/* 🔗 Links */
+/* 🟢 Green Links */
 a {
-    color: #58a6ff;
+    color: #3fb950; /* GitHub-style green links */
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
-    color: #79c0ff; /* Lighter blue on hover */
+    color: #2ea043; /* Darker green on hover */
 }
 
-/* 📌 Italics */
-em, i {
-    color: #b8949e; /* Magenta */
-}
-
-/* 📜 Blockquotes */
-blockquote {
-    color: #b8949e; /* Magenta */
-    border-left: 4px solid #30363d; /* Grey border */
-    padding-left: 10px;
-    margin: 10px 0;
-    word-wrap: break-word;
-}
-
-/* 🔢 Lists */
+/* 🔴 List Formatting with Red Bullets */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -56,17 +45,35 @@ ul {
 ul li::before {
     content: "-";
     color: red;
+    font-weight: bold;
     padding-right: 10px;
 }
 
-/* 🖥 Responsive Fix: Ensure text & code blocks wrap */
+/* 🔤 Bold, Italics, & Blockquotes */
+strong, b {
+    color: #e6edf3; /* Brighter white for bold text */
+}
+
+em, i {
+    color: #b8949e; /* Magenta for italics */
+}
+
+/* 📜 Blockquotes */
+blockquote {
+    color: #b8949e; /* Magenta */
+    border-left: 4px solid #30363d; /* Grey border */
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+/* 🖥 Code Blocks */
 pre, code {
     background-color: #161b22; /* Code block background */
     color: #c9d1d9; /* Light grey text */
     font-family: 'Consolas', 'Monaco', monospace;
     padding: 10px;
     border-radius: 6px;
-    overflow-x: auto; /* Ensure code blocks are scrollable */
+    overflow-x: auto;
     display: block;
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -75,7 +82,7 @@ pre, code {
 /* 📱 Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
     .markdown-body {
-        max-width: 100%;
+        width: 95%;
         padding: 15px;
     }
 
