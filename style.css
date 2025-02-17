@@ -1,4 +1,4 @@
-/* 🌙 Pure Black Background for True GitHub-Style Markdown */
+/* 🌙 GitHub Dark Mode – Exact Match */
 body {
     background-color: #000000; /* PURE BLACK */
     color: #c9d1d9; /* GitHub default text color */
@@ -8,22 +8,25 @@ body {
     justify-content: center; /* Centers content */
 }
 
-/* 📏 Centered Content with No Forced Wrapping */
+/* 📏 Full-Width, But Not Too Wide */
 .markdown-body {
-    width: 100%; /* Max width for full ASCII-style text */
-    max-width: 900px; /* Prevents content from being too wide */
-    background-color: #000000; /* Ensures markdown box is also pure black */
+    width: 95%; /* Expand width closer to goal */
+    max-width: 1100px; /* Prevents excessive width */
+    background-color: #000000; /* Matches Markdown preview */
     padding: 20px;
-    border-radius: 0px; /* Remove rounding */
-    box-shadow: none; /* No shadows for flat design */
-    white-space: pre-wrap; /* Ensure Markdown respects manual line breaks */
+    border-radius: 0px; /* Keep flat UI */
+    box-shadow: none; /* No unnecessary shadows */
+    white-space: pre-wrap; /* Ensure Markdown respects line breaks */
     overflow-wrap: normal; /* Prevent auto-wrapping */
+    line-height: 1.5; /* Adjust spacing for readability */
 }
 
-/* 🏷 Headings */
+/* 🏷 Headings – Slightly Larger for Visibility */
 h1, h2, h3, h4 {
     color: #e6edf3; /* Brighter white */
-    margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
 
 /* 🟢 Green Links */
@@ -53,13 +56,14 @@ ul li::before {
 /* 🔤 Bold, Italics, & Blockquotes */
 strong, b {
     color: #e6edf3; /* Brighter white for bold text */
+    font-weight: bold;
 }
 
 em, i {
     color: #b8949e; /* Magenta for italics */
 }
 
-/* 📜 Blockquotes */
+/* 📜 Blockquotes – Ensure Contrast */
 blockquote {
     color: #b8949e; /* Magenta */
     border-left: 4px solid #30363d; /* Grey border */
@@ -67,7 +71,7 @@ blockquote {
     margin: 10px 0;
 }
 
-/* 🖥 Code Blocks */
+/* 🖥 Code Blocks – Prevent Wrapping */
 pre, code {
     background-color: #000000; /* Matches black background */
     color: #c9d1d9; /* Light grey text */
@@ -79,10 +83,15 @@ pre, code {
     white-space: pre; /* Preserve formatting */
 }
 
+/* 🔥 Reduce List Item Spacing */
+li {
+    margin-bottom: 4px; /* More compact list spacing */
+}
+
 /* 📱 Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
     .markdown-body {
-        width: 95%;
+        width: 98%;
         padding: 15px;
     }
 
