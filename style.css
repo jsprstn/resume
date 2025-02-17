@@ -1,28 +1,53 @@
+/* 🌙 GitHub Dark Theme Background */
 body {
     background-color: #0d1117; /* Dark background */
-    color: #c9d1d9; /* GitHub-style text color */
+    color: #c9d1d9; /* Default text color */
     font-family: Consolas, Monaco, monospace; /* ASCII-style font */
     padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .markdown-body {
     max-width: 800px;
     margin: auto;
-    background-color: #161b22;
+    background-color: #161b22; /* Code block background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+    word-wrap: break-word; /* Ensure text wraps gracefully */
 }
 
+/* 🌟 Headings */
 h1, h2, h3, h4 {
-    color: #58a6ff; /* GitHub Blue */
+    color: #58a6ff; /* GitHub blue */
+    word-wrap: break-word;
 }
 
+/* 🔗 Links */
 a {
     color: #58a6ff;
     text-decoration: none;
 }
 
+a:hover {
+    color: #79c0ff; /* Lighter blue on hover */
+}
+
+/* 📌 Italics */
+em, i {
+    color: #b8949e; /* Magenta */
+}
+
+/* 📜 Blockquotes */
+blockquote {
+    color: #b8949e; /* Magenta */
+    border-left: 4px solid #30363d; /* Grey border */
+    padding-left: 10px;
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+
+/* 🔢 Lists */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -30,6 +55,36 @@ ul {
 
 ul li::before {
     content: "-";
-    color: red; /* Red hyphen bullets */
+    color: red;
     padding-right: 10px;
+}
+
+/* 🖥 Responsive Fix: Ensure text & code blocks wrap */
+pre, code {
+    background-color: #161b22; /* Code block background */
+    color: #c9d1d9; /* Light grey text */
+    font-family: 'Consolas', 'Monaco', monospace;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto; /* Ensure code blocks are scrollable */
+    display: block;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* 📱 Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+    .markdown-body {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 90%;
+    }
+
+    pre, code {
+        font-size: 85%;
+        padding: 8px;
+    }
 }
