@@ -1,27 +1,28 @@
-/* 🌙 GitHub Dark Mode Styling */
+/* 🌙 Pure Black Background for True GitHub-Style Markdown */
 body {
-    background-color: #0d1117; /* Dark background */
-    color: #c9d1d9; /* Default text color */
+    background-color: #000000; /* PURE BLACK */
+    color: #c9d1d9; /* GitHub default text color */
     font-family: Consolas, Monaco, monospace; /* ASCII-style font */
     padding: 20px;
     display: flex;
     justify-content: center; /* Centers content */
 }
 
-/* 📏 Properly Center & Expand Layout */
+/* 📏 Centered Content with No Forced Wrapping */
 .markdown-body {
-    width: 80%; /* Adjust width for better readability */
+    width: 100%; /* Max width for full ASCII-style text */
     max-width: 900px; /* Prevents content from being too wide */
-    background-color: #161b22; /* Slightly lighter dark background */
+    background-color: #000000; /* Ensures markdown box is also pure black */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-    line-height: 1.6; /* Improve text readability */
+    border-radius: 0px; /* Remove rounding */
+    box-shadow: none; /* No shadows for flat design */
+    white-space: pre-wrap; /* Ensure Markdown respects manual line breaks */
+    overflow-wrap: normal; /* Prevent auto-wrapping */
 }
 
 /* 🏷 Headings */
 h1, h2, h3, h4 {
-    color: #e6edf3; /* Bright white */
+    color: #e6edf3; /* Brighter white */
     margin-bottom: 10px;
 }
 
@@ -36,7 +37,7 @@ a:hover {
     color: #2ea043; /* Darker green on hover */
 }
 
-/* 🔴 List Formatting with Red Bullets */
+/* 🔴 Red Bullet Points */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -68,15 +69,14 @@ blockquote {
 
 /* 🖥 Code Blocks */
 pre, code {
-    background-color: #161b22; /* Code block background */
+    background-color: #000000; /* Matches black background */
     color: #c9d1d9; /* Light grey text */
     font-family: 'Consolas', 'Monaco', monospace;
     padding: 10px;
-    border-radius: 6px;
-    overflow-x: auto;
+    border-radius: 0px;
+    overflow-x: auto; /* Ensure code scrolls instead of wrapping */
     display: block;
-    word-wrap: break-word;
-    white-space: pre-wrap;
+    white-space: pre; /* Preserve formatting */
 }
 
 /* 📱 Mobile-Friendly Adjustments */
