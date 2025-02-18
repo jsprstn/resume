@@ -1,0 +1,50 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20250217221645
+Username: AUG3124\jsapi
+RunAs User: AUG3124\jsapi
+Configuration Name: 
+Machine: AUG3124 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 40200
+PSVersion: 5.1.26100.2161
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.2161
+BuildVersion: 10.0.26100.2161
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\link-checker.log
+Link Checker Starting...
+Configuration:
+
+Name                           Value
+----                           -----
+UserAgent                      Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+LogPath                        .\link-checker.log
+RetryCount                     2
+Timeout                        15
+ExportPath                     .\link-check-results.csv
+
+
+Total URLs to check: 13
+[1/13] Testing LinkedIn Profile...
+ Failed
+  Error: The remote server returned an error: (999) Request denied.
+[2/13] Testing Magellan Aerospace Winnipeg...
+ OK
+[3/13] Testing F-35 JSF Agreement...
+ OK
+[4/13] Testing GE F414 MOU...
+ OK
+[5/13] Testing RADARSAT-2...
+ OK
+[6/13] Testing Black Brant...
+ OK
+[7/13] Testing WSPS...
+ OK
+[8/13] Testing CAE Defense...
+ OK
+[9/13] Testing 402 Squadron...
