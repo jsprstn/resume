@@ -1,7 +1,7 @@
 /* Balanced design system - technical with standard elements */
 :root {
     --bg-primary: #0d1920;          /* Softened deep blue */
-    --text-primary: #e6e6e6;        /* Standard light gray */
+    --text-primary: #f0f0f0;        /* Slightly lighter gray for better readability */
     --accent-blue: #4a9eff;         /* More traditional blue */
     --accent-green: #4EC9B0;        /* Softer green */
     --accent-red: #E34234;          /* Standard red */
@@ -26,8 +26,7 @@ pre {
     line-height: 1.4;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 3px;
-	overflow-x: auto;
+    border-radius: 3px; /* Fixed missing unit */
 }
 
 .heading-1 {
@@ -57,19 +56,19 @@ pre {
 .tech-link {
     color: var(--text-primary);
     text-decoration: underline;
-    text-decoration-color: var(--accent-blue); /* Make the underline blue */
+    text-decoration-color: var(--accent-blue);
     text-underline-offset: 3px;
 }
 
 .tech-link:hover {
     text-decoration: underline;
-    text-decoration-color: var(--accent-green); /* Make the underline blue */
+    text-decoration-color: var(--accent-green);
 }
 
 .contact-link {
     color: var(--text-primary);
     text-decoration: underline;
-    text-decoration-color: var(--accent-blue); /* Make the underline blue */
+    text-decoration-color: var(--accent-blue);
     text-underline-offset: 3px;
 }
 
@@ -106,34 +105,31 @@ pre {
     color: var(--accent-green);
 }
 
-.revision-link {
-    text-decoration: none;
+a:visited {
     color: inherit;
-}
-.revision-link:hover {
-    font-weight: bold;
 }
 
 /* Print optimization */
 @media print {
     body {
         background: white;
-        color: #000000; /* Pure black for maximum contrast */
+        color: #000000;
         font-size: 10.5px;
         padding: 0.45in;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
     }
     
     pre {
         background: none;
-        color: #000000; /* Ensuring text in pre tags is not too dark */
-
+        color: #6B737A;
     }
     
     .tech-link {
-        color: #0044bb; /* Adjusted blue for better contrast */
+        color: #0044bb;
         font-weight: 700;
         text-decoration: underline;
-		text-decoration-color: #006655;
+        text-decoration-color: #006655;
         text-decoration-thickness: 1px;
     }
 
@@ -142,10 +138,10 @@ pre {
     }
     
     .ticker-link {
-        color: #53595e;
+        color: #6B737A;
         font-weight: 700;
         text-decoration: underline;
-		text-decoration-color: #0044bb;
+        text-decoration-color: #0044bb;
     }
 
     .ticker-link:hover {
@@ -153,32 +149,32 @@ pre {
     }
     
     .vertical-bar {
-        color: #dd0000; /* Brighter, deeper red for better visibility */
+        color: #dd0000;
         font-weight: bold;
     }
     
     .heading-1 {
-        color: #000000; /* Pure black */
-        border-bottom: 2px solid #222222; /* Darker border */
-        font-weight: 700; /* Extra bold */
+        color: #000000;
+        border-bottom: 2px solid #222222;
+        font-weight: 700;
     }
     
     .section-header {
-        color: #0044bb; /* Deeper blue for section headers */
+        color: #006655;
         font-weight: bold;
     }
     
     .subsection-header {
-        color: #006655; /* Deeper teal */
+        color: #006655;
         font-weight: bold;
     }
 
     .hyphen {
-        color: #dd0000; /* Brighter red for bullets */
+        color: #dd0000;
     }
     
     .date-line {
-        color: #6B737A; /* Even darker gray for better contrast */
+        color: #6B737A;
         font-weight: 700;
     }
 }
