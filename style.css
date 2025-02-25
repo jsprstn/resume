@@ -73,9 +73,9 @@ pre {
 }
 
 .contact-link:hover {
-    color: var(--accent-blue)var(--text-primary);
+    color: var(--accent-blue);
     text-decoration: underline;
-    text-decoration-color: ; /* Make the underline blue */
+    text-decoration-color: var(--accent-green);
     text-underline-offset: 3px;
 }
 
@@ -86,7 +86,7 @@ pre {
 
 .date-line {
     color: #d4d4d4;
-    font-size: 0.95em;
+    font-size: 1em;
 }
 
 .vertical-bar {
@@ -105,28 +105,78 @@ pre {
     color: var(--accent-green);
 }
 
+.revision-link {
+    text-decoration: none;
+    color: inherit;
+}
+.revision-link:hover {
+    font-weight: bold;
+}
+
 /* Print optimization */
 @media print {
     body {
         background: white;
-        color: black;
-        font-size: 12px;
-        padding: 0.5in;
+        color: #000000; /* Pure black for maximum contrast */
+        font-size: 10.5px;
+        padding: 0.45in;
     }
     
     pre {
         background: none;
+        color: #000000; /* Ensuring text in pre tags is not too dark */
     }
     
-    .tech-link, .ticker-link {
-        color: #000;
+    .tech-link {
+        color: #0044bb; /* Adjusted blue for better contrast */
+        font-weight: 700;
+        text-decoration: underline;
+		text-decoration-color: #006655;
+        text-decoration-thickness: 1px;
+    }
+
+    .tech-link:hover {
+        color: #0066cc;
+    }
+    
+    .ticker-link {
+        color: #53595e;
+        font-weight: 700;
+        text-decoration: underline;
+		text-decoration-color: #0044bb;
+    }
+
+    .ticker-link:hover {
+        color: #008866;
     }
     
     .vertical-bar {
-        color: #666;
+        color: #dd0000; /* Brighter, deeper red for better visibility */
+        font-weight: bold;
     }
     
-    .heading-1, .section-header {
-        border-bottom-color: #ccc;
+    .heading-1 {
+        color: #000000; /* Pure black */
+        border-bottom: 2px solid #222222; /* Darker border */
+        font-weight: 700; /* Extra bold */
+    }
+    
+    .section-header {
+        color: #0044bb; /* Deeper blue for section headers */
+        font-weight: bold;
+    }
+    
+    .subsection-header {
+        color: #006655; /* Deeper teal */
+        font-weight: bold;
+    }
+
+    .hyphen {
+        color: #dd0000; /* Brighter red for bullets */
+    }
+    
+    .date-line {
+        color: #6B737A; /* Even darker gray for better contrast */
+        font-weight: 700;
     }
 }
