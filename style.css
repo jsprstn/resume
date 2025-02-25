@@ -27,6 +27,7 @@ pre {
     padding: 1rem;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 3px;
+	overflow-x: auto;
 }
 
 .heading-1 {
@@ -125,6 +126,7 @@ pre {
     pre {
         background: none;
         color: #000000; /* Ensuring text in pre tags is not too dark */
+
     }
     
     .tech-link {
