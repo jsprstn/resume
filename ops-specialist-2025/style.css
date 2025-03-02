@@ -61,6 +61,7 @@ pre {
 }
 
 .tech-link:hover {
+   color: var(--accent-blue);
     text-decoration: underline;
     text-decoration-color: var(--accent-green);
 }
