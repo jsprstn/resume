@@ -202,9 +202,7 @@ a:visited {
     .section-header {
         color: #006655;
         font-weight: bold;
-        text-decoration: underline;
-        text-decoration-color: var(--accent-blue);
-    }
+    }   
 
     .subsection-header {
         color: #006655;
