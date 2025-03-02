@@ -60,9 +60,33 @@ pre {
 }
 
 .tech-link:hover {
-   color: var(--accent-blue);
    text-decoration: underline;
    text-decoration-color: var(--accent-green);
+}
+
+.tech-link-white {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-blue);
+    text-underline-offset: 3px;
+}
+
+.tech-link-white:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-green);
+}
+
+.ticker-link {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-blue);
+    text-underline-offset: 3px;
+    font-size: 0.75em;
+}
+
+.ticker-link:hover {
+    text-decoration: underline; 
+    text-decoration-color: var(--accent-green);
 }
 
 .summary-text {
@@ -103,21 +127,10 @@ pre {
     margin: 0 0.5rem;
 }
 
-.ticker-link {
-    color: var(--accent-blue);
-    text-decoration: underline;
-    text-decoration-color: var(--accent-green);	
-    font-size: 0.75em;
-}
-
-.ticker-link:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--accent-green);
-}
-
 a:visited {
     color: inherit;
 }
+
 .revision-link {
 	font-size: 13px;
 }
