@@ -65,6 +65,14 @@ pre {
     text-decoration-color: var(--accent-green);
 }
 
+.summary-text {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
 .contact-link {
     color: var(--text-primary);
     text-decoration: underline;
