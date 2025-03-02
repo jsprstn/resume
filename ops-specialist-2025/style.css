@@ -61,8 +61,8 @@ pre {
 
 .tech-link:hover {
    color: var(--accent-blue);
-    text-decoration: underline;
-    text-decoration-color: var(--accent-green);
+   text-decoration: underline;
+   text-decoration-color: var(--accent-green);
 }
 
 .summary-text {
@@ -104,9 +104,9 @@ pre {
 }
 
 .ticker-link {
-    color: #a0a0a0;
-    text-decoration: underline;	
-    text-decoration-color: var(--accent-blue);	
+    color: var(--accent-blue);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-green);	
     font-size: 0.75em;
 }
 
