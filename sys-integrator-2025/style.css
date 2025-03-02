@@ -43,8 +43,7 @@ pre {
     font-size: 1.2em;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border-subtle);
-}
+  }
 
 .subsection-header {
     color: var(--accent-green);
@@ -61,8 +60,9 @@ pre {
 }
 
 .tech-link:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--accent-green);
+   color: var(--accent-blue);
+   text-decoration: underline;
+   text-decoration-color: var(--accent-green);
 }
 
 .summary-text {
@@ -104,13 +104,15 @@ pre {
 }
 
 .ticker-link {
-    color: #a0a0a0;
-    text-decoration: none;
-    font-size: 0.9em;
+    color: var(--accent-blue);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-green);	
+    font-size: 0.75em;
 }
 
 .ticker-link:hover {
-    color: var(--accent-green);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-green);
 }
 
 a:visited {
@@ -139,27 +141,31 @@ a:visited {
         color: #6B737A;
     }
     
-    .tech-link {
-        color: #0044bb;
-        font-weight: 700;
-        text-decoration: underline;
-        text-decoration-color: #006655;
-        text-decoration-thickness: 1px;
-    }
-
+	
     .tech-link:hover {
         color: #0066cc;
     }
+	
+	.summary-text {
+    max-width: 1100px;
+    margin: 0 auto;
+	}
     
+	.tech-link {
+        color: #000000;
+        text-decoration: underline;
+        text-decoration-color: var(--accent-blue);
+    }
+	
     .ticker-link {
         color: #6B737A;
         font-weight: 700;
         text-decoration: underline;
-        text-decoration-color: #0044bb;
+        text-decoration-color: var(--accent-blue);
     }
 
     .ticker-link:hover {
-        color: #008866;
+        color: #0066cc;
     }
     
     .vertical-bar {
@@ -176,6 +182,8 @@ a:visited {
     .section-header {
         color: #006655;
         font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: var(--accent-blue);    
     }
     
     .subsection-header {
@@ -210,4 +218,3 @@ a:visited {
 
 	
 }
-
