@@ -105,8 +105,9 @@ pre {
 
 .ticker-link {
     color: #a0a0a0;
-    text-decoration: none;
-    font-size: 0.9em;
+    text-decoration: underline;	
+    text-decoration-color: #0044bb;	
+    font-size: 0.7em;
 }
 
 .ticker-link:hover {
@@ -140,7 +141,6 @@ a:visited {
     }
     
     .tech-link {
-        color: #0044bb;
         font-weight: 700;
         text-decoration: underline;
         text-decoration-color: #006655;
