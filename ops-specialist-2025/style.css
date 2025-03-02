@@ -201,8 +201,6 @@ a:visited {
 
     .section-header {
         font-weight: bold;
-        text-decoration: underline;
-        text-decoration-color: var(--accent-blue);
     }
 
     .subsection-header {
