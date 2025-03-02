@@ -43,8 +43,7 @@ pre {
     font-size: 1.2em;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border-subtle);
-}
+  }
 
 .subsection-header {
     color: var(--accent-green);
@@ -183,8 +182,8 @@ a:visited {
     .section-header {
         color: #006655;
         font-weight: bold;
-		text-decoration: underline;
-		text-decoration-color: var(--accent-blue);    
+	text-decoration: underline;
+	text-decoration-color: var(--accent-blue);    
     }
     
     .subsection-header {
