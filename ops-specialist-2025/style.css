@@ -1,5 +1,4 @@
-/* Updated style to improve summary text spacing and readability */
-
+/* Balanced design system - technical with standard elements */
 :root {
     --bg-primary: #0d1920;          /* Softened deep blue */
     --text-primary: #f0f0f0;        /* Slightly lighter gray for better readability */
@@ -23,13 +22,11 @@ body {
 pre {
     color: var(--text-primary);
     white-space: pre-wrap;
-    word-wrap: break-word;
-    max-width: 80ch; /* Ensures wrapping based on readable width */
     margin: 0;
     line-height: 1.4;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 3px;
+    border-radius: 3px; /* Fixed missing unit */
 }
 
 .heading-1 {
@@ -44,16 +41,16 @@ pre {
 .section-header {
     color: var(--accent-blue);
     font-size: 1.2em;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid var(--border-subtle);
 }
 
 .subsection-header {
     color: var(--accent-green);
     font-size: 1.1em;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
 }
 
 .tech-link {
@@ -69,11 +66,9 @@ pre {
 }
 
 .summary-text {
-    max-width: 80ch;
-    white-space: pre-wrap;
-    word-wrap: break-word;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+	max-width: 1100px;
 }
 
 .contact-link {
@@ -109,11 +104,11 @@ pre {
 .ticker-link {
     color: #a0a0a0;
     text-decoration: none;
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 .ticker-link:hover {
-    color: #4a9eff;
+    color: var(--accent-green);
 }
 
 a:visited {
@@ -126,4 +121,90 @@ a:visited {
 .revision-link:hover {
 	font-weight: bold;
 }
+/* Print optimization */
+@media print {
+    body {
+        background: white;
+        color: #000000;
+        font-size: 10.5px;
+        padding: 0.45in;
+        webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    pre {
+        background: none;
+        color: #6B737A;
+    }
+    
+    .tech-link {
+        color: #0044bb;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-color: #006655;
+        text-decoration-thickness: 1px;
+    }
 
+    .tech-link:hover {
+        color: #0066cc;
+    }
+    
+    .ticker-link {
+        color: #6B737A;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-color: #0044bb;
+    }
+
+    .ticker-link:hover {
+        color: #008866;
+    }
+    
+    .vertical-bar {
+        color: #dd0000;
+        font-weight: bold;
+    }
+    
+    .heading-1 {
+        color: #000000;
+        border-bottom: 2px solid #222222;
+        font-weight: 900;
+    }
+    
+    .section-header {
+        color: #006655;
+        font-weight: bold;
+    }
+    
+    .subsection-header {
+        color: #006655;
+        font-weight: bold;
+    }
+
+    .hyphen {
+        color: #dd0000;
+    }
+    
+    .date-line {
+        color: #6B737A;
+        font-weight: 700;
+    }
+	.revision-link {
+		font-size: 10.5px;
+}
+@media (prefers-color-scheme: dark) {
+    a {
+        color: #4a9eff; /* Adjusted for contrast */
+    }
+
+    a:visited {
+        color: #8bb3ff; /* Slightly dimmed but not purple */
+    }
+
+    a:hover {
+        color: #4EC9B0;
+    }
+}
+
+	
+}
