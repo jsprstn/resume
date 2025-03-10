@@ -58,6 +58,10 @@ pre {
     margin-bottom: 0.8rem;
 }
 
+.subsection-header a {
+    color: var(--text-primary) !important;
+}
+
 .tech-link {
     color: var(--text-primary);
     text-decoration: underline;
@@ -209,6 +213,11 @@ a:visited {
         font-weight: bold;
     }
 
+	.subsection-header a {
+        color: inherit !important;
+        text-decoration-color: var(--accent-blue) !important;
+    }
+    
     .hyphen {
         color: #dd0000;
     }
