@@ -60,6 +60,10 @@ pre {
     margin-bottom: 0.8rem;
 }
 
+.subsection-header a {
+    color: var(--text-primary) !important;
+}
+
 .tech-link {
     color: var(--text-primary);
     text-decoration: underline;
@@ -190,17 +194,21 @@ a:visited {
 
     .section-header {
         font-weight: bold;
-		text-decoration: underline;
-		text-decoration-color: #000000;
-		text-underline-offset: 16px;
-
+	text-decoration: underline;
+	text-decoration-color: #000000;
+	text-underline-offset: 16px;
     }
 
     .subsection-header {
         color: #006655;
         font-weight: bold;
     }
-
+	
+    .subsection-header a {
+        color: inherit !important;
+        text-decoration-color: var(--accent-blue) !important;
+    }
+	
     .hyphen {
         color: #dd0000;
     }
