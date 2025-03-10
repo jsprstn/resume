@@ -205,7 +205,7 @@ a:visited {
     }
 	
     .subsection-header a {
-        color: inherit !important;
+        color: #000000 !important;
         text-decoration-color: var(--accent-blue) !important;
     }
 	
