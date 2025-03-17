@@ -41,7 +41,6 @@ pre {
     font-weight: bold;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border-subtle);
 }
 
 .section-header {
@@ -49,6 +48,9 @@ pre {
     font-size: 1.2em;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+	text-decoration: underline;
+    text-decoration-color: var(--text-primary);
+    text-underline-offset: 16px;
 }
 
 .subsection-header {
@@ -70,18 +72,6 @@ pre {
 }
 
 .tech-link:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--accent-green);
-}
-
-.tech-link-white {
-    color: var(--text-primary);
-    text-decoration: underline;
-    text-decoration-color: var(--accent-blue);
-    text-underline-offset: 3px;
-}
-
-.tech-link-white:hover {
     text-decoration: underline;
     text-decoration-color: var(--accent-green);
 }
@@ -154,8 +144,8 @@ a:visited {
     body {
         background: white;
         color: #000000;
-        font-size: 10.5px;
-        padding: 0.45in;
+        font-size: 10.8px;
+        padding: 0.55in;
         webkit-print-color-adjust: exact;
         color-adjust: exact;
     }
@@ -199,25 +189,26 @@ a:visited {
 
     .heading-1 {
         color: #000000;
-        border-bottom: 2px solid #222222;
         font-weight: 900;
     }
 
     .section-header {
-        color: #006655;
         font-weight: bold;
-    }   
+	text-decoration: underline;
+	text-decoration-color: #000000;
+	text-underline-offset: 16px;
+    }
 
     .subsection-header {
         color: #006655;
         font-weight: bold;
     }
-
-	.subsection-header a {
+	
+    .subsection-header a {
         color: #000000 !important;
         text-decoration-color: var(--accent-blue) !important;
     }
-    
+	
     .hyphen {
         color: #dd0000;
     }
