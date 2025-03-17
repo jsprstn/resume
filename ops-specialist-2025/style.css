@@ -1,8 +1,8 @@
 /* Balanced design system - technical with standard elements */
 :root {
-    --bg-primary: #0d1920;
+    --bg-primary: #010409;
     /* Softened deep blue */
-    --text-primary: #f0f0f0;
+    --text-primary: #F0F6FC;
     /* Slightly lighter gray for better readability */
     --accent-blue: #4a9eff;
     /* More traditional blue */
