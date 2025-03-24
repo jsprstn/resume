@@ -35,11 +35,15 @@ pre {
     /* Fixed missing unit */
 }
 
+.summary-text {
+    max-width: 700px;
+}
+
 .heading-1 {
     color: var(--text-primary);
-    font-size: 1.4em;
+    font-size: 2.4em;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     padding-bottom: 0.5rem;
 }
 
@@ -50,7 +54,7 @@ pre {
     margin-bottom: 1rem;
 	text-decoration: underline;
     text-decoration-color: var(--text-primary);
-    text-underline-offset: 16px;
+    text-underline-offset: 10px;
 }
 
 .subsection-header {
@@ -87,13 +91,6 @@ pre {
 .ticker-link:hover {
     text-decoration: underline;
     text-decoration-color: var(--accent-green);
-}
-
-.summary-text {
-    max-width: 1100px;
-    margin: 0 auto;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
 }
 
 
@@ -144,7 +141,7 @@ a:visited {
     body {
         background: white;
         color: #000000;
-        font-size: 10.8px;
+        font-size: 10px;
         padding: 0.55in;
         webkit-print-color-adjust: exact;
         color-adjust: exact;
@@ -196,7 +193,7 @@ a:visited {
         font-weight: bold;
 	text-decoration: underline;
 	text-decoration-color: #000000;
-	text-underline-offset: 16px;
+	text-underline-offset: 6px;
     }
 
     .subsection-header {
