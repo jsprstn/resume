@@ -18,6 +18,10 @@ body {
     margin: 0 auto;
 }
 
+.revision-link {;
+    font-size: 11px;
+}
+
 .resume-header {
     margin-bottom: 1.5rem;
 }
