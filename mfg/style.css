@@ -123,28 +123,43 @@ ul.bullets li {
 
 /* Print optimization */
 @media print {
-    body {
-        background: white;
-        color: #000000;
-        font-size: 11px;
-        padding: 0.55in;
-        webkit-print-color-adjust: exact;
-        color-adjust: exact;
-    }
+  body, html {
+    background: #fff !important;
+    color: #000 !important;
+	font-size: 10.3px;
+    line-height: 1.5;
+    padding: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-    .heading-1,
-    .section-header,
-    .subsection-header {
-        color: #000000 !important;
-        text-decoration-color: #000000 !important;
-    }
+  * {
+    background: none !important;
+    box-shadow: none !important;
+  }
+  
+  ul.bullets li, ul.core-columns li, .profile-header, .core-competencies-header, .edu-block, .job-block, .date-line, .skills-block, .tech-link, .ticker-link, .contact-info, .header, .heading-1 {
+    color: #000 !important;
+  }
+  
+  .section-header {
+    color: var(--accent-blue);
+    font-size: 1.2em;
+    margin-top: 2rem;
+    text-decoration: underline;
+    text-decoration-color: #000;
+    margin-bottom: 1.5rem;
+    text-underline-offset: 8px;
+}
 
-    .date-line, .ticker-link, .vertical-bar {
-        color: #444 !important;
-    }
+.date-line {
+    color: #000;
+}
 
-    ul.bullets li {
-        color: #111 !important;
-        font-family: 'Consolas', 'Courier New', monospace;
-    }
+.vertical-bar {
+    color: #000;
+	opacity: 1.0;
+}
+
+
 }
